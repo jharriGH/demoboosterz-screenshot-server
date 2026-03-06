@@ -1,5 +1,5 @@
 {
-  "name": "demoenginez-screenshot-server",
+  "name": "demoboosterz-screenshot-server",
   "version": "1.0.0",
   "main": "server.js",
   "scripts": {
@@ -10,6 +10,6 @@
     "puppeteer": "^21.0.0"
   },
   "engines": {
-    "node": ">=18.0.0"
+    "node": "20.x"
   }
 }
