@@ -19,6 +19,9 @@ const AUTH_TOKEN = process.env.AUTH_TOKEN || 'demoenginez-screenshots-2024';
 app.get('/', (req, res) => {
   res.json({ status: 'ok', service: 'DemoBoosterz Screenshot Server' });
 });
+app.get('/health', (req, res) => {
+  res.json({ status: 'healthy', service: 'DemoBoosterz Screenshot Server', timestamp: new Date().toISOString() });
+});
 
 app.post('/screenshot', async (req, res) => {
   const token = req.headers['x-auth-token'];
@@ -77,3 +80,4 @@ app.post('/screenshot', async (req, res) => {
 });
 
 app.listen(PORT, () => console.log(`Screenshot server running on port ${PORT}`));
+
