@@ -34,29 +34,34 @@ app.post('/screenshot', async (req, res) => {
 
   let browser;
   try {
-    browser = await puppeteer.launch({
-      headless: 'new',
-      executablePath: '/usr/bin/google-chrome-stable',
-      args: [
-        '--no-sandbox',
-        '--disable-setuid-sandbox',
-        '--disable-dev-shm-usage',
-        '--disable-gpu',
-        '--no-first-run',
-        '--disable-extensions',
-        '--disable-background-networking',
-        '--disable-default-apps',
-        '--disable-sync',
-        '--disable-translate',
-        '--hide-scrollbars',
-        '--metrics-recording-only',
-        '--mute-audio',
-        '--safebrowsing-disable-auto-update'
-      ]
-    });
+   browser = await puppeteer.launch({
+  headless: 'new',
+  executablePath: '/usr/bin/google-chrome-stable',
+  args: [
+    '--no-sandbox',
+    '--disable-setuid-sandbox',
+    '--disable-dev-shm-usage',
+    '--disable-gpu',
+    '--no-first-run',
+    '--disable-extensions',
+    '--disable-background-networking',
+    '--disable-default-apps',
+    '--disable-sync',
+    '--disable-translate',
+    '--hide-scrollbars',
+    '--metrics-recording-only',
+    '--mute-audio',
+    '--safebrowsing-disable-auto-update',
+    '--disable-blink-features=AutomationControlled'
+  ]
+});
 
-    const page = await browser.newPage();
-    await page.setViewport({ width: 1280, height: 800 });
+const page = await browser.newPage();
+await page.setViewport({ width: 1280, height: 800 });
+await page.setUserAgent('Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36');
+await page.evaluateOnNewDocument(() => {
+  Object.defineProperty(navigator, 'webdriver', { get: () => undefined });
+});
 
     if (html) {
       console.log('Rendering HTML directly');
@@ -80,4 +85,5 @@ app.post('/screenshot', async (req, res) => {
 });
 
 app.listen(PORT, () => console.log(`Screenshot server running on port ${PORT}`));
+
 
