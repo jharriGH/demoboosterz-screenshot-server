@@ -73,8 +73,11 @@ await page.evaluateOnNewDocument(() => {
       await new Promise(r => setTimeout(r, 8000));
     }
 
-    const screenshot = await page.screenshot({ type: 'jpeg', quality: 85, encoding: 'base64' });
-    await browser.close();
+    const screenshot = await page.screenshot({
+  type: 'jpeg',
+  quality: 85,
+  fullPage: true
+});
 
     res.json({ success: true, image: `data:image/jpeg;base64,${screenshot}` });
   } catch (error) {
@@ -85,5 +88,6 @@ await page.evaluateOnNewDocument(() => {
 });
 
 app.listen(PORT, () => console.log(`Screenshot server running on port ${PORT}`));
+
 
 
