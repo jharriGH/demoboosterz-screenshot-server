@@ -63,11 +63,12 @@ app.post('/screenshot', async (req, res) => {
     await page.evaluateOnNewDocument(() => {
       Object.defineProperty(navigator, 'webdriver', { get: () => undefined });
     });
-    if (html) {
-      console.log('Rendering HTML directly');
-      await page.setContent(html, { waitUntil: 'domcontentloaded' });
-      await new Promise(r => setTimeout(r, 3000));
-    } else {
+   if (html) {
+  console.log('Rendering HTML directly');
+  await page.setContent(html, { waitUntil: 'domcontentloaded' });
+  await new Promise(r => setTimeout(r, 3000));
+  await page.evaluate(() => window.scrollTo(0, 0));
+} else {
       console.log(`Taking screenshot of: ${url}`);
       await page.goto(url, { waitUntil: 'domcontentloaded', timeout: 45000 });
       await new Promise(r => setTimeout(r, 5000));
@@ -89,3 +90,4 @@ app.post('/screenshot', async (req, res) => {
   }
 });
 app.listen(PORT, () => console.log(`Screenshot server running on port ${PORT}`));
+
