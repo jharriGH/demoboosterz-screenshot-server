@@ -63,21 +63,28 @@ app.post('/screenshot', async (req, res) => {
     await page.evaluateOnNewDocument(() => {
       Object.defineProperty(navigator, 'webdriver', { get: () => undefined });
     });
-   if (html) {
+ if (html) {
   console.log('Rendering HTML directly');
   await page.setContent(html, { waitUntil: 'domcontentloaded' });
   await new Promise(r => setTimeout(r, 3000));
-  await page.evaluate(() => window.scrollTo(0, 0));
+  // Force scroll to absolute top before capturing
+  await page.evaluate(() => {
+    window.scrollTo(0, 0);
+    document.documentElement.scrollTop = 0;
+    document.body.scrollTop = 0;
+  });
+  await new Promise(r => setTimeout(r, 500));
 } else {
       console.log(`Taking screenshot of: ${url}`);
       await page.goto(url, { waitUntil: 'domcontentloaded', timeout: 45000 });
       await new Promise(r => setTimeout(r, 5000));
     }
-    const screenshot = await page.screenshot({
-      type: 'jpeg',
-      quality: 80,      // Balanced quality/size
-      fullPage: false   // Viewport only — fullPage caused memory crashes on Render Starter (512MB)
-    });
+   const screenshot = await page.screenshot({
+  type: 'jpeg',
+  quality: 80,
+  fullPage: false,
+  clip: { x: 0, y: 0, width: 1280, height: 800 }
+});
     await browser.close();
     browser = null;
     // Return raw binary JPEG — no base64 encoding, no JSON wrapper
@@ -90,4 +97,5 @@ app.post('/screenshot', async (req, res) => {
   }
 });
 app.listen(PORT, () => console.log(`Screenshot server running on port ${PORT}`));
+
 
