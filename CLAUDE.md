@@ -1,398 +1,166 @@
----
-## AUTONOMOUS EXECUTION — READ THIS FIRST
-
-You are part of the King James Empire CC fleet.
-Jim Harris is NEVER the middleman. Ever.
-
-BEFORE ANYTHING ELSE:
-brain_session_start(focus="[task]", product="[project]")
-
-GET CREDENTIALS (never ask Jim):
-brain_vault_search("what you need")
-
-DISPATCH ANOTHER CC (never ask Jim to do it):
-run_build_task(project="[project]", prompt="[task]")
-
-LOG EVERYTHING:
-brain_log(content, project)     — events
-brain_memory(content, tags)     — decisions
-
-END EVERY SESSION:
-brain_session_end(product, what_shipped,
-  decisions, next_action)
-brain_save_card(title, project, content)
-
-ONLY INTERRUPT JIM FOR:
-+ Business decisions requiring his judgment
-+ Credentials genuinely not in vault after search
-+ Task complete — here are the results
-+ Truly blocked with specific reason
-
-NEVER:
-- Ask Jim for credentials
-- Ask Jim to copy/paste anything
-- Present options and wait
-- Ask Jim to run any command
-- Be the middleman between SC and CC
-
-KJE MCP: https://kje-mcp.onrender.com/mcp/T24NM1Sxbh7txJs-unNIjblaXMqA1OZW6gNU-Ud5Yjk/
-VPS: 192.161.173.97 (claude at /usr/local/bin/claude)
-Brain: https://jim-brain-production.up.railway.app
-Key: jim-brain-kje-2026-kingjames
----
-
----
-## MANDATORY: START EVERY SESSION WITH THIS
-brain_session_start(
-  focus="[describe what you are working on]",
-  product="[this repo's project id]"
-)
-Brain URL: https://jim-brain-production.up.railway.app
-Brain Key: jim-brain-kje-2026-kingjames
-DO THIS BEFORE ANY OTHER WORK. NO EXCEPTIONS.
----
-
-# CLAUDE.md — King James Empire Master Rules
-# Version: 2.0 | Updated: April 1, 2026
-# READ THIS ENTIRE FILE BEFORE TOUCHING ANYTHING.
-# These rules override Claude's default behavior. No exceptions.
+# 🧠 DemoBoosterz — CLAUDE.md
+# Auto-healed by claude_md_healer.py from Jim Brain state
+# Last healed: 2026-05-11 20:00:06 UTC
+# Repo: /opt/demoboosterz
 
 ---
 
-## WHO YOU ARE WORKING WITH
+## WHO YOU WORK FOR
 
-Jim Harris — solo entrepreneur, **DevelopingRiches, Inc.** (C-Corp), Long Beach CA.
-Building a fully autonomous AI-powered SaaS empire under the **King James Empire (KJE)** brand.
-Non-technical founder. Claude does ALL coding.
-**Jim's standard: GOAT. Everything ships production-ready or it doesn't ship.**
+You are working for Jim Harris — King James Empire (KJE).
+Empire-wide rules in `/opt/jim-brain/CLAUDE.md` (KJ_RULEZ) apply unless this
+file explicitly supersedes them.
 
----
-
-## THE #1 RULE — SMART CLAUDE MODE
-
-Smart Claude is NOT an answer machine. Smart Claude is a strategic partner.
-
-Before doing ANYTHING, ask:
-- Is there a faster way to do this?
-- Can this be automated instead of done manually?
-- Will this decision cost Jim time or money later?
-- Does Jim already own a tool that does this?
-
-**Always suggest automation before manual. Always.**
+Brain endpoint: `https://jim-brain-production.up.railway.app`
+Brain key: `jim-brain-kje-2026-kingjames` (header: `x-brain-key`, lowercase)
 
 ---
 
-## CORE RULES — NON-NEGOTIABLE
+## PROJECT STATUS
 
-### 1. Complete, Production-Ready Deliverables Only
-- No placeholders. No `YOUR_API_KEY_HERE`. No `PASTE_ID_HERE`.
-- No partial code. Every file must work as-is.
-- No manual edits required after delivery.
-- Always specify: exact repo name, Supabase project, folder path, service name.
+- **Project:** DemoBoosterz 🚀
+- **ID:** `demoboosterz`
+- **Group:** KJE SaaS
+- **Status:** `testing`
+- **Description:** Demo builder — launch ready, guided tour pending
 
-### 2. GOAT Standard
-- Every product ships with: error handling, Brain logging, proper auth headers, production URLs.
-- Test before declaring done. NEVER say "this should work" without verifying.
-- If broken: fix it. Don't hand it back with "try this and see."
-
-### 3. Never Break Working Things
-- If an endpoint works in production — EXTEND it, never rewrite it.
-- If a service is healthy — do NOT touch its config unless that's the explicit task.
-- Always verify current state before making changes.
-
-### 4. Always Verify Before Assuming
-- Never assume a file path, URL, or service name — always check first.
-- Run `ls`, `curl /health`, `docker ps` before starting any VPS work.
-- If unsure: ask Jim. Don't guess on live systems.
-
-### 5. Test Everything
-- Every new endpoint gets a curl test before moving on.
-- Every VPS change gets a health check after.
-- Every deploy waits 2-3 min then gets a live URL test.
-
-### 6. Jim's Time is the Empire's #1 Asset
-- Every manual step Jim takes is a cost.
-- Batch operations wherever possible.
-- If something takes Jim 2 hours manually but 10 min with code — write the code.
-
-### 7. Proactive Suggestions — Always
-Unprompted, flag:
-- Better tools or shortcuts
-- Cost savings (Jim has many LTDs — check before recommending paid tools)
-- Automation opportunities
-- Bugs or tech debt spotted during work
-
-### 8. Never Celebrate Early
-Only celebrate when something is CONFIRMED working. Not before.
+### Next Action
+Stress test all flows and niches. Fix remaining bugs. Close as COMPLETE. Then build sales page.
 
 ---
 
-## VPS — CRITICAL READ
+## RECENT MEMORIES (top 1)
 
-**RackNerd KVM VPS**
-- IP: 192.161.173.97
-- SSH: `ssh root@192.161.173.97` port 22
-- OS: Ubuntu 24.04
+1. Saved card IDs: ReviewBombz 1776982890230, KJLE 1776982893503, KJWidgetz 1776982896422, DemoEnginez 1776982899202, DemoBoosterz 1776982901880, SiteEnginez 1776982904787, IASY 1776982907530, UnhideLocal 1776982910247, TestEnginez 1776982912894
 
-**Directory locations — NEVER assume, always verify:**
-```bash
-ls /opt/ava    # AVA voice engine
-ls /opt/dnc    # DNC compliance service
-ls /etc/asterisk/  # Asterisk PBX config
+---
+
+## BUILD STATE
+
+**Card:** KJLE BUILD_STATE 2026-05-10 (Session 2B closed)
+**Saved:** 2026-05-11T01:21:09.193664
+
+# KJLE Build State — Session 2B (Truelist Bulk Batches) — CLOSED 2026-05-10
+
+## What shipped (commits)
+- b8b877d feat(email-clean): Truelist bulk batches architecture (Session 2B)
+- be3c39b fix(email-clean): NULL-semantics bug in select_uncleaned_leads
+- 0076569 fix(email-clean): paginate select_uncleaned_leads past PostgREST 1000-row cap
+- 14 repos updated via brain_sync for new status-banner rule
+- KJ_RULEZ.md commit 031a0c3 on kj-bridgedeck/main
+
+## Architecture changes
+- New migration: migrations/2026_05_10_truelist_batches.sql (audit table + email_sub_state + email_truelist_batch_id + 2 admin_settings keys)
+- Rewrite api/routes/enrichment_email_clean.py: parse_truelist_state (handles ok/invalid/risky/unknown + email_* prefixed variants), is_campaign_eligible (positive whitelist only), select_uncleaned_leads (HOT>WARM>COLD priority with .range() pagination), submit_batch (POST /api/v1/batches + audit), ingest_batch_result (idempotent cursor + id-range UPDATE), 4 new endpoints
+- New api/routes/webhooks_truelist.py: receiver shim at /webhooks/truelist/batch-complete?secret=... ready for Truelist dashboard webhook
+- scheduler.py: replaced v1 verify_inline loop with batch submitter; new job_email_clean_poll_batches cron every 30 min
+- 41-fixture boot check at scripts/test_email_clean_parser.py covering parser vocab, prefixed forms, defensive defaults, positive-whitelist campaign eligibility, CSV ingestion, reordered headers
+
+## Batch-1 verification (LIVE)
+- batch_id: 9292028e-f0e3-401a-ac5e-390e92838f9a
+- 4000 KJLE leads submitted, 3907 unique emails after Truelist dedup
+- Truelist completed in ~95 min wallclock
+- Auto-ingest counts: valid=2795, invalid=76, unknown=1129, error=0, no_csv_match=0
+- CSV reconciliation: 1:1 with ingest (CSV 2722 ok + 74 invalid + 1111 risky/unknown = 3907 unique; ingest 2795 + 76 + 1129 = 4000 = 3907 + 93 duplicates ✓)
+- Per-lead spot-check: 7/7 verified leads matched expected mapping AND scoped to batch-1
+- Sub-state preservation working: email_ok 2250, is_role 816, accept_all 326, failed_mx_check 42, failed_no_mailbox 19, unknown 547
+
+## Live segment + email state (post-batch-1)
+- total: 560,057 (was 556,830, +3,227 new from CSV import last night)
+- hot: 20,596 / warm: 129,524 / cold: 406,710 / unclassified: 3,227
+- by_email_status: valid 70,559 / invalid 76 (was 0!) / unknown 17,576 / error 3,490 / pending_batch 18,352
+
+## Bugs found and fixed mid-session
+- NULL-semantics bug: select_uncleaned_leads filtered .neq('email_status','pending_batch') which excludes NULL email_status rows in PostgREST. Switched to .is_('email_truelist_batch_id','null'). Same gotcha family as pain Session 1.
+- 1000-row response cap: .limit(25000) capped at 1000 per segment so first batch only marked 4000 leads. Switched to .range()-based pagination per segment, drains 1000 at a time.
+- Parser bug from v1: checked state=='bad' but Truelist returns 'invalid'. Fixed in parse_truelist_state; verified live by first-ever nonzero invalid count.
+
+## Investigation surprises (worth remembering)
+- Truelist's POST /batches accepts but silently ignores webhook_url field. Webhook is dashboard-side config only. Receiver shim built, awaiting dashboard wire-up.
+- verify_inline returns inconsistent prefixed/unprefixed state strings (email_invalid vs risky). Parser handles both defensively now.
+
+## Open anomalies for Session 2C
+- 2786 orphan leads with email_status='pending_batch' and no parent batch_id. Likely leftovers from earlier aborted submits. Cleanup: flush back to NULL or sweep into next batch.
+- 17576 'unknown' leads from v1 verify_inline include hidden invalids (the v1 parser miscategorized state=='invalid' as unknown). Re-verify via new architecture to recover them.
+- Truelist dashboard webhook not yet configured. 30-min poller is currently the only completion path. Latency 0-30 min instead of seconds.
+
+## Session 2C scope
+1. Configure Truelist dashboard webhook → /webhooks/truelist/batch-complete?secret=... (5 min Truelist UI work)
+2. Re-verify the 17576 v1-unknown leads via batch architecture
+3. Cleanup 2786 orphan pending_batch rows
+4. Watch first full weekend of 4-batches/night nightly cron — expect backlog clear in ~5 days at 100K/day
+5. Build Card v9 update reflecting Truelist-v2-as-canonical state
+
+## Pinned items (carry-over)
+- Send to DemoBoosterz from Lead Finder (after tour rebuild)
+- Schedule local backups for Documents/GitHub folder
+- Rotate exposed ReachInbox + DemoEnginez Supabase service role keys on Render
+
+
+---
+
+## EMPIRE-WIDE RULES (excerpt)
+
+1. **Brain Endpoint Verification** — always hit `/health` then the real
+   endpoint with `x-brain-key` header BEFORE coding against it. Document
+   actual response shape. No assumptions from convention.
+
+2. **Empire Cost Logging** — any LLM call must be instrumented via
+   `kje-cost-logger` per `docs/EMPIRE_COST_LOGGING_BUILD_CARD.md`.
+
+3. **Env Var Automation** — CC never asks Jim to manually click env vars
+   into a dashboard. Use Render / Railway / Cloudflare APIs. Tokens live
+   in CC env (`RENDER_API_KEY`, `RAILWAY_TOKEN`, `CF_API_TOKEN`).
+
+4. **Gotcha Logging** — log any bug / workaround to Brain via
+   `POST /memory` with tags `["demoboosterz", "gotcha", "lesson"]` the
+   moment context is fresh.
+
+5. **Session Start / End** — every CC session begins with
+   `brain_session_start(focus="...", product="demoboosterz")` and ends
+   with `brain_session_end(...)` + `brain_save_card(...)`.
+
+---
+
+## VAULT KEYS AVAILABLE FOR THIS PROJECT
+
+Use `GET /vault/demoboosterz/<KEY>/reveal` with header
+`x-brain-key: jim-brain-kje-2026-kingjames` to fetch real values.
+
+| Key | Masked | Service |
+|---|---|---|
+| `NODE_ENV` | `` | render |
+| `AUTH_TOKEN` | `` | render |
+| `BRIDGEDECK_URL` | `` | render |
+| `BRIDGEDECK_INGEST_KEY` | `` | render |
+
+Empire-wide shared keys (always available):
+
+- `GITHUB_PAT_VPS` — VPS automation PAT (contents:write)
+- `SUPABASE-PAT-SHARED` — Supabase DDL automation token
+- `SUPABASE_PERSONAL_ACCESS_TOKEN` — Supabase PAT (44+ chars)
+
+---
+
+## SESSION END PROTOCOL
+
+Before closing the chat, run:
+
+```
+POST /memory   tags=["demoboosterz", "session_end"]
+               content="<what shipped, what's next>"
+POST /log      tags=["demoboosterz", "session_complete"]
+               content="<one-liner>"
+POST /cards    title="<Project> BUILD_STATE <date>"
+               project="demoboosterz"
+               content="<full markdown spec>"
 ```
 
-**Run this health check BEFORE every VPS session:**
-```bash
-docker ps
-curl -s http://localhost:15000/health
-systemctl status asterisk
-curl http://localhost:8001/guard/health
-```
-
-**AVA / Asterisk:**
-- Asterisk runs as HOST service (not Docker) on port 8088
-- ARI credentials: `asterisk` / `asterisk`
-- **TRUNK NAME: `twilio` — NEVER use `kjsalesagentz` (this broke everything before)**
-- Outbound dial: `PJSIP/+1{10digits}@twilio`
-- Contexts: `kjwidgetz_warm` (pain 70-84), `kjwidgetz_hot` (pain 85+)
-
-**Test call command:**
-```bash
-curl -u asterisk:asterisk \
-  -X POST "http://127.0.0.1:8088/ari/channels" \
-  -H "Content-Type: application/json" \
-  -d '{"endpoint":"PJSIP/+15622436177@twilio","app":"asterisk-ai-voice-agent","appArgs":"kjwidgetz_warm","callerId":"+18666217044"}'
-```
-
-**Budget Guard:** http://192.161.173.97:8001
-- Limits: $75/day · $350/week · $1,200/month · SOFT mode
-- Table: `budget_guardrails` (not salesagentz_spend_log)
-- Cost log: `api_cost_log` (has channel, product, client_id cols)
-
-**Backup before every session:**
-```bash
-mkdir -p /root/kje-backups/$(date +%Y%m%d)
-cp -r /opt/ava/config /root/kje-backups/$(date +%Y%m%d)/ava-config
-cp /opt/ava/.env /root/kje-backups/$(date +%Y%m%d)/ava.env 2>/dev/null
-cp /opt/ava/docker-compose.yml /root/kje-backups/$(date +%Y%m%d)/
-cp /etc/asterisk/pjsip.conf /root/kje-backups/$(date +%Y%m%d)/pjsip.conf
-cp /etc/asterisk/ari.conf /root/kje-backups/$(date +%Y%m%d)/ari.conf
-cp -r /opt/dnc /root/kje-backups/$(date +%Y%m%d)/dnc
-echo "Backup complete: $(date)"
-```
+If anything broke, log a gotcha memory FIRST so the next session inherits
+the lesson.
 
 ---
 
-## EMPIRE INFRASTRUCTURE
-
-### Live Products
-| Product | URL | Notes |
-|---------|-----|-------|
-| KJLE API | kjle-api.onrender.com | Master key: kjle-prod-2026-secret |
-| KJWidgetz API | kjwidgetz-api.onrender.com | Admin: x-kjwidgetz-admin: kjwidgetz-admin-2026-king-james-kj |
-| SiteEnginez | kjwidgetz-api.onrender.com/sites/ | Same server as KJWidgetz |
-| DemoBoosterz | demoboosterz.com | — |
-| VoiceDropz | kjvoicedropz-api-production.up.railway.app | Bridge key: kjvoicedropz-bridge-2026-king-james |
-| Jim Brain | jim-brain-production.up.railway.app | Key: jim-brain-kje-2026-kingjames |
-| KJ Autonomous | kj-autonomous.up.railway.app | n8n instance |
-| KJ Command Deck | deck.kjle.com | — |
-| AVA Admin UI | http://192.161.173.97:3003 | admin/[see password manager] |
-| Budget Guard | http://192.161.173.97:8001 | VPS port 8001 |
-| DNC Service | http://192.161.173.97:7070 | VPS port 7070 |
-
-### Supabase Projects
-| Project | ID | Used For |
-|---------|-----|---------|
-| KJE Main | dhzpwobfihrprlcxqjbq | KJWidgetz + KJLE + SiteEnginez + UnhideLocal |
-| DemoBoosterz | oiiduolwnhinosmbkquz | DemoBoosterz + VoiceDropz |
-
-### Hosting
-| Service | Purpose |
-|---------|---------|
-| Render | API servers (FastAPI/Node) |
-| Railway | n8n, Jim Brain, VoiceDropz, KJ Autonomous |
-| Cloudflare Pages | Frontend hosting ($0, 15-sec deploys) |
-| Lovable | Frontend UI apps |
-| Cloudflare R2 | File storage (bucket: kjle-assets) |
-
-### GitHub Repos
-All repos at: `C:\Users\Jim\Documents\GitHub\`
-- kjwidgetz-api (Node.js/Express — Render)
-- jim-brain (Python/FastAPI — Railway)
-- kjle (Python/FastAPI — Render)
-- kjvoicedropz-api (Python/FastAPI — Railway)
-- kjle-command-deck (React — Cloudflare Pages)
-- empire-dashboard (HTML — Cloudflare Pages)
-
----
-
-## KJWIDGETZ API — REPO SPECIFIC
-
-**Runtime:** Node.js + Express
-**Deploy:** Render (auto-deploys on push to main)
-**Live:** https://kjwidgetz-api.onrender.com
-
-**Structure:**
-```
-kjwidgetz-api/
-├── server.js           # Main entry — registers all routes
-├── src/
-│   ├── routes/         # All route files
-│   │   ├── callback.js # Callback Agent (AVA live calls)
-│   │   ├── chatbot.js
-│   │   ├── billing.js
-│   │   └── [others]
-│   ├── middleware/
-│   │   ├── auth.js     # requireAdmin
-│   │   ├── ratelimit.js
-│   │   └── audit.js
-│   └── services/
-│       ├── supabase.js # Always use db from here
-│       └── stripe.js
-```
-
-**Route pattern — always match exactly:**
-```javascript
-const express = require('express')
-const router = express.Router()
-const { db, logAudit } = require('../services/supabase')
-const { requireAdmin } = require('../middleware/auth')
-// routes here
-module.exports = router
-```
-
-**Adding a new route to server.js:**
-```javascript
-const newRouter = require('./src/routes/newroute')
-app.use('/newroute', newRouter)
-```
-
-**Git workflow:**
-```bash
-git add .
-git commit -m "descriptive message"
-git push origin main --force
-# Wait 2-3 min then test: curl https://kjwidgetz-api.onrender.com/health
-```
-
----
-
-## JIM BRAIN PROTOCOL
-
-**Every significant action gets logged. No exceptions.**
-
-```bash
-curl -X POST https://jim-brain-production.up.railway.app/memory \
-  -H "Content-Type: application/json" \
-  -H "x-brain-key: jim-brain-kje-2026-kingjames" \
-  -d '{"content": "Description under 500 chars", "agent": "claude_code", "tags": ["product_slug", "milestone"]}'
-```
-
-**Brain curl content rules (CRITICAL):**
-- Never use single quotes inside content string
-- Never use backticks in content
-- Replace em dashes with hyphens
-- Replace newlines with spaces
-- Keep content under 500 characters
-- If long: split into multiple smaller calls
-- Use `/log` instead of `/memory` for automated/agent content
-
-**Log to Brain when:**
-- A workflow is published
-- A product goes live
-- A bug is fixed
-- A session ends
-- A revenue milestone hits
-- A new integration is wired
-
----
-
-## TOOLS JIM ALREADY OWNS
-Check this before recommending ANY paid tool:
-
-| Tool | What It Does | Cost |
-|------|-------------|------|
-| ReachInbox | Cold email sequences | LTD $0 |
-| Instantly | Email sending (25K contacts, 125K/mo) | LTD $0 |
-| HeyReach | LinkedIn automation (2 accts, 6 seats) | LTD $0 |
-| Truelist.io | Email + phone validation | Unlimited subscription |
-| Posira | LinkedIn warm signals | LTD $67 |
-| Veedea | Interactive video | LTD $166 |
-| Yepic + Vumu | AI avatar video | Owned |
-| Slybroadcast | RVM drops (replacing Drop Cowboy) | Pay per drop |
-| Twilio | SMS + SIP + voice | (866) 621-7044 A2P verified |
-
----
-
-## KJ SALESAGENTZ — VOICE SPECIFICS
-
-**All 5 product clone scripts are live on VPS.**
-**Agent 4 is autonomous — fires daily 8:55am weekdays.**
-**TEST MODE by default — requires explicit live flag to dial.**
-
-AVA Contexts built:
-- `kjwidgetz_warm` — warm leads pain 70-84 (Option 8 Local Hybrid)
-- `kjwidgetz_hot` — hot leads pain 85+ (Option 7 OpenAI Realtime)
-- `callback-agent-{client_id_12chars}` — inbound callbacks
-
-Callback initiate endpoint (built, needs deploy):
-```
-POST /callback/initiate
-Body: { client_id, visitor_phone, page_url, source }
-```
-
----
-
-## N8N PATTERNS (KJ Autonomous)
-
-```javascript
-// CORRECT after chained HTTP nodes
-$('Node Name').item.json.field_name
-
-// WRONG — never use
-$json.field_name
-```
-
-- Strip pinData/meta/staticData before importing workflows
-- Deactivate before replacing webhook workflows
-- Claude model in all nodes: `claude-sonnet-4-20250514`, max_tokens: 1000
-- Pain score gate: never dial leads below 70
-- Always Budget Guard check before any AVA dial
-
----
-
-## COMMUNICATION RULES
-
-**How Jim talks:**
-- Direct. No fluff.
-- Uses "LOL", "Nice!", "Woohoo!" — match energy when things work
-- Hates vague answers — always be specific
-- Prefers step-by-step with exact values to paste
-
-**How Claude responds:**
-- Lead with the answer, not the explanation
-- Tables for comparisons, code blocks for copy-paste
-- Keep prose tight — Jim is busy
-- Working = celebrate briefly then move on
-- Broken = diagnose fast, fix fast, no excessive apologizing
-- NEVER say "I hope this helps" or "Let me know if you need anything else"
-- NEVER say "this should work" — test it and confirm
-
----
-
-## SESSION CLOSING CHECKLIST
-
-Before ending ANY session:
-- [ ] All built items tested and confirmed working
-- [ ] Git pushed to main, Render/Railway deploy confirmed
-- [ ] Log to Jim Brain (follow content rules above)
-- [ ] State clearly: what's done, what's pending, what's next
-- [ ] Update relevant build cards if architecture changed
-
----
-
-## THE NORTH STAR
-
-> King James Empire = A fully autonomous AI-powered business system where AI agents run 95%+ of daily operations, Jim collects revenue, and the empire scales itself. 👑
-
-Every decision, every build, every suggestion moves toward that north star.
+*Synced from Brain state at 2026-05-11 20:00:06 UTC.*
+*This file is auto-regenerated every 4h. Manual edits will be overwritten
+on the next heal if the rebuilt content differs by >20% of lines.*
