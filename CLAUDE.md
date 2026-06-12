@@ -1,7 +1,82 @@
+<<<<<<< Updated upstream
 # 🧠 DemoBoosterz — CLAUDE.md
 # Auto-healed by claude_md_healer.py from Jim Brain state
 # Last healed: 2026-05-12 00:00:05 UTC
 # Repo: /opt/demoboosterz
+=======
+## Empire onboarding -- read every session
+Single source of truth: jharriGH/kjle. On session start, fetch + follow:
+- https://raw.githubusercontent.com/jharriGH/kjle/main/EMPIRE_SC_HANDOFF.md
+- https://raw.githubusercontent.com/jharriGH/kjle/main/EMPIRE_INTEGRATION_STANDARD.md
+Keep current at this repo root:
+1. ROADMAP.md -- valid YAML front-matter (project, status, description, last_updated, repo,
+   api_url, facts_doc, vault_key, integrates_with). The empire dashboard reads this; bump
+   last_updated on any change.
+2. PROJECT_FACTS.md -- integration contract (endpoints, schema, auth), verified against the
+   live system. Vault key NAMES only, never secret values.
+To learn about another project: brain_search for "<project> integration" or read EMPIRE_INDEX.md
+in jharriGH/kjle -> that project's PROJECT_FACTS.md -> brain_vault_search for its key.
+Repo edits: this repo only, explicit file paths only.
+
+---
+## AUTONOMOUS EXECUTION — READ THIS FIRST
+
+You are part of the King James Empire CC fleet.
+Jim Harris is NEVER the middleman. Ever.
+
+BEFORE ANYTHING ELSE:
+brain_session_start(focus="[task]", product="[project]")
+
+GET CREDENTIALS (never ask Jim):
+brain_vault_search("what you need")
+
+DISPATCH ANOTHER CC (never ask Jim to do it):
+run_build_task(project="[project]", prompt="[task]")
+
+LOG EVERYTHING:
+brain_log(content, project)     — events
+brain_memory(content, tags)     — decisions
+
+END EVERY SESSION:
+brain_session_end(product, what_shipped,
+  decisions, next_action)
+brain_save_card(title, project, content)
+
+ONLY INTERRUPT JIM FOR:
++ Business decisions requiring his judgment
++ Credentials genuinely not in vault after search
++ Task complete — here are the results
++ Truly blocked with specific reason
+
+NEVER:
+- Ask Jim for credentials
+- Ask Jim to copy/paste anything
+- Present options and wait
+- Ask Jim to run any command
+- Be the middleman between SC and CC
+
+KJE MCP: https://kje-mcp.onrender.com/mcp/T24NM1Sxbh7txJs-unNIjblaXMqA1OZW6gNU-Ud5Yjk/
+VPS: 192.161.173.97 (claude at /usr/local/bin/claude)
+Brain: https://jim-brain-production.up.railway.app
+Key: jim-brain-kje-2026-kingjames
+---
+
+---
+## MANDATORY: START EVERY SESSION WITH THIS
+brain_session_start(
+  focus="[describe what you are working on]",
+  product="[this repo's project id]"
+)
+Brain URL: https://jim-brain-production.up.railway.app
+Brain Key: jim-brain-kje-2026-kingjames
+DO THIS BEFORE ANY OTHER WORK. NO EXCEPTIONS.
+---
+
+# CLAUDE.md — King James Empire Master Rules
+# Version: 2.0 | Updated: April 1, 2026
+# READ THIS ENTIRE FILE BEFORE TOUCHING ANYTHING.
+# These rules override Claude's default behavior. No exceptions.
+>>>>>>> Stashed changes
 
 ---
 
