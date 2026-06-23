@@ -278,23 +278,16 @@ brain_get_card(id)   # load full spec
 
 ---
 
-## SESSION END — DO THIS AUTOMATICALLY
+*Synced from Brain state at 2026-05-12 00:00:05 UTC.*
+*This file is auto-regenerated every 4h. Manual edits will be overwritten
+on the next heal if the rebuilt content differs by >20% of lines.*
 
-```
-brain_session_end(
-  product="demoboosterz_ss",
-  what_shipped="[what was built]",
-  decisions="[key decisions]",
-  next_action="[most important next task]"
-)
-brain_save_card(
-  title="DEMOBOOSTERZ_SS BUILD_STATE [date]",
-  project="demoboosterz_ss",
-  content="[full build state md]"
-)
-```
 
----
-
-*Synced: June 22, 2026 07:36 PM PST*
-*Refresh: `python brain_sync.py demoboosterz_ss`*
+<!-- KJE-ONBOARD-V1 -->
+## KJ Empire — SC Onboarding
+This repo belongs to the KJ Empire (DevelopingRiches Inc, owner Jim Harris / jharriGH).
+- Central repo: jharriGH/kjle. Brain: https://jim-brain-production.up.railway.app
+- New SC seats: run brain_status, brain_search this repo's slug, and verify live state before declaring anything done.
+- Decide-and-proceed. Cost-gate chargeable dispatches. Never echo secrets — pull keys from the Brain vault.
+- See ROADMAP.md for status.
+<!-- /KJE-ONBOARD-V1 -->
