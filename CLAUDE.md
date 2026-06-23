@@ -1,7 +1,7 @@
 # ⚡ DEMOBOOSTERZ_SS — CLAUDE.md
 # Managed by brain_sync.py (Brain sections)
 # + Manual additions (never auto-updated)
-# Last synced: June 22, 2026 07:36 PM PST
+# Last synced: June 22, 2026 08:43 PM PST
 
 ---
 
@@ -219,7 +219,7 @@ Then give a plain-English summary of what we accomplished.
 
 ## CURRENT STATUS
 <!-- BRAIN-SYNC:START:STATUS -->
-*Brain sync: June 22, 2026 07:36 PM PST*
+*Brain sync: June 22, 2026 08:43 PM PST*
 
 <!-- BRAIN-SYNC:END:STATUS -->
 
@@ -231,6 +231,14 @@ Then give a plain-English summary of what we accomplished.
 - MRR: $0.00
 - HOT leads: 0
 - Last decision: None
+
+**AI Costs:**
+- Today: $0.0000
+- This month: $0.0042
+- All time: $0.0042
+
+**Empire:**
+- 2 live | 2 launch ready | 8 in progress
 <!-- BRAIN-SYNC:END:EMPIRE_STATE -->
 
 ---
@@ -261,6 +269,18 @@ Then give a plain-English summary of what we accomplished.
 ## MANUAL ADDITIONS
 <!-- brain_sync.py never modifies below this line -->
 
+---
+
+## EMPIRE STATE & COSTS
+
+---
+
+## RECENT DEMOBOOSTERZ_SS MEMORIES
+
+---
+
+## BUILD STATE
+
 
 ---
 
@@ -278,16 +298,23 @@ brain_get_card(id)   # load full spec
 
 ---
 
-*Synced from Brain state at 2026-05-12 00:00:05 UTC.*
-*This file is auto-regenerated every 4h. Manual edits will be overwritten
-on the next heal if the rebuilt content differs by >20% of lines.*
+## SESSION END — DO THIS AUTOMATICALLY
 
+```
+brain_session_end(
+  product="demoboosterz_ss",
+  what_shipped="[what was built]",
+  decisions="[key decisions]",
+  next_action="[most important next task]"
+)
+brain_save_card(
+  title="DEMOBOOSTERZ_SS BUILD_STATE [date]",
+  project="demoboosterz_ss",
+  content="[full build state md]"
+)
+```
 
-<!-- KJE-ONBOARD-V1 -->
-## KJ Empire — SC Onboarding
-This repo belongs to the KJ Empire (DevelopingRiches Inc, owner Jim Harris / jharriGH).
-- Central repo: jharriGH/kjle. Brain: https://jim-brain-production.up.railway.app
-- New SC seats: run brain_status, brain_search this repo's slug, and verify live state before declaring anything done.
-- Decide-and-proceed. Cost-gate chargeable dispatches. Never echo secrets — pull keys from the Brain vault.
-- See ROADMAP.md for status.
-<!-- /KJE-ONBOARD-V1 -->
+---
+
+*Synced: June 22, 2026 08:43 PM PST*
+*Refresh: `python brain_sync.py demoboosterz_ss`*
