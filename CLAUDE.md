@@ -1,7 +1,7 @@
 # ⚡ DEMOBOOSTERZ_SS — CLAUDE.md
 # Managed by brain_sync.py (Brain sections)
 # + Manual additions (never auto-updated)
-# Last synced: June 22, 2026 08:43 PM PST
+# Last synced: June 29, 2026 11:57 AM PST
 
 ---
 
@@ -85,6 +85,8 @@ Report: unified diff + one-line summary
   also write a deterministic record (build card / next_action), don't rely on search alone.
 - "Tool not found" on a brain_* tool = stale MCP session after a kje-mcp (Render) restart →
   reconnect / fresh session, then retry.
+- CRITICAL WRITES: For state that MUST be findable later (decisions, gotchas, session summaries), write via POST /memory/raw - it embeds deterministically into Qdrant. Plain POST /memory can silently dedup (returns added:false) and lose the write. Always verify the /memory/raw response shows embedded:true plus an id.
+- UNREGISTERED PROJECT: If PATCH /projects returns 404 for a slug that has memories, the project is missing from the empire_state.projects registry. Run register_missing.py in the jim-brain repo (it mirrors brain_register read-append-insert). Do NOT hand-write empire_state.
 
 # ───────────────────────────────────────────────────────────
 # 6. DEPLOY-AND-VERIFY
@@ -219,7 +221,7 @@ Then give a plain-English summary of what we accomplished.
 
 ## CURRENT STATUS
 <!-- BRAIN-SYNC:START:STATUS -->
-*Brain sync: June 22, 2026 08:43 PM PST*
+*Brain sync: June 29, 2026 11:57 AM PST*
 
 <!-- BRAIN-SYNC:END:STATUS -->
 
@@ -233,12 +235,12 @@ Then give a plain-English summary of what we accomplished.
 - Last decision: None
 
 **AI Costs:**
-- Today: $0.0000
-- This month: $0.0042
-- All time: $0.0042
+- Today: $0.0049
+- This month: $0.0049
+- All time: $0.0049
 
 **Empire:**
-- 2 live | 2 launch ready | 8 in progress
+- 2 live | 2 launch ready | 10 in progress
 <!-- BRAIN-SYNC:END:EMPIRE_STATE -->
 
 ---
@@ -316,5 +318,5 @@ brain_save_card(
 
 ---
 
-*Synced: June 22, 2026 08:43 PM PST*
+*Synced: June 29, 2026 11:57 AM PST*
 *Refresh: `python brain_sync.py demoboosterz_ss`*
