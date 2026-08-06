@@ -1,7 +1,7 @@
 # ⚡ DEMOBOOSTERZ_SS — CLAUDE.md
 # Managed by brain_sync.py (Brain sections)
 # + Manual additions (never auto-updated)
-# Last synced: July 31, 2026 01:32 PM PST
+# Last synced: August 06, 2026 02:17 PM PST
 
 ---
 
@@ -304,16 +304,23 @@ Manual run: python brain_sync.py  (location: C:\Users\Jim\Documents\GitHub\)
 # ───────────────────────────────────────────────────────────
 # MANDATORY FOOTER — end EVERY response with this block
 # ───────────────────────────────────────────────────────────
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 📁 [PROJECT] · [TAG] · [DIR]
-🎯 Task: [TASK]
-📍 Now: [what you are doing this response]
-🕐 Started [STARTED]
+🕐 Started [STARTED]  ·  Now: [one-phrase current step]
+📋 TASK:
+   [line 1 of the task Jim gave, ~70 chars]
+   [line 2, ~70 chars]
+   [line 3, ~70 chars]
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 
-To fill PROJECT/TAG/DIR/STARTED: read the context file the cc launcher wrote at kickoff:
-  PowerShell: Get-Content "$env:TEMP\cc_context_<TAG>.txt"
-where <TAG> is your session tag (e.g. TEST-9). Lines: TAG=, TASK=, PROJECT=, DIR=, STARTED=.
-Use TASK for the Task line. Fill Now with your current action.
-If the file is not found, fall back to working directory + repo name; note "context file not found" once.
+Fill rules:
+- PROJECT/TAG/DIR/STARTED: read context file: Get-Content "$env:TEMP\cc_context_<TAG>.txt"
+  Fields: TAG=, TASK=, PROJECT=, DIR=, STARTED= (real launch timestamp from the launcher).
+- TASK = FIRST 3 LINES of the task Jim gave at session start, verbatim, each truncated ~70 chars.
+  This is the key identifier — it's how Jim tells sessions apart.
+- Now = one short phrase for the current step (e.g. "reading scheduler.py", "writing fix").
+- If the context file is missing: fall back to working dir + repo name, still echo the 3 task lines.
+- MANDATORY on EVERY response, not just completion.
 
 # ───────────────────────────────────────────────────────────
 # TEMPLATE — UNIVERSAL SESSION ENDER (paste to a CC to close out)
@@ -340,7 +347,7 @@ verified landed" ONLY if every read-back above passed.
 
 ## CURRENT STATUS
 <!-- BRAIN-SYNC:START:STATUS -->
-*Brain sync: July 31, 2026 01:32 PM PST*
+*Brain sync: August 06, 2026 02:17 PM PST*
 
 <!-- BRAIN-SYNC:END:STATUS -->
 
@@ -437,5 +444,5 @@ brain_save_card(
 
 ---
 
-*Synced: July 31, 2026 01:32 PM PST*
+*Synced: August 06, 2026 02:17 PM PST*
 *Refresh: `python brain_sync.py demoboosterz_ss`*
